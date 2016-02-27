@@ -2,6 +2,7 @@
 
 Syncronizes the model with the view and vice versa so every change in the model gets automatically reflected in the view.
 
+
 ![Demo](https://raw.githubusercontent.com/nilsvogt/nivo.js.viewmodel/master/example.gif)
 
 ## Create the controller
