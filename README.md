@@ -2,8 +2,8 @@
 
 Syncronizes the model with the view and vice versa so every change in the model gets automatically reflected in the view.
 
+## Create the controller
 ```
-	// Create the controller
 	new nivo.Controller('MainCtrl', function($scope) {
 		// Assign some defaults to the scope
 		$scope.title = "Implementation Of a Model View Binding";
@@ -22,4 +22,28 @@ Syncronizes the model with the view and vice versa so every change in the model 
 			$scope.set('title', 'Some totally new title'); // or just pass a new value directly to the model
 		}, 2000);
 	});
+```
+
+## Create the view
+```
+	<div nv-controller="MainCtrl">
+		<h1>{{title}}</h1>
+
+		<p>
+			{{contents.copy}}
+		</p>
+
+		<div>
+			<label>Title</label>
+			<input type="text" nv-model="title" />
+		</div>
+
+		<div>
+			<label>Copy</label>
+			<textarea nv-model="contents.copy"></textarea>
+		</div>
+
+		<p>
+			{{title}} : {{contents.copy}}</p>
+	</div>
 ```
